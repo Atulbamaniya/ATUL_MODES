@@ -1,0 +1,207 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0; padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ececec;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 1.8rem; font-weight: 700;
+  letter-spacing: 2px;
+  color: #00d8ff;
+  user-select: none;
+}
+
+.menu-btn {
+  font-size: 1.4rem;
+  background: none; border: none; color: #00d8ff;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center; padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #00f3fe;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00f3fe;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #adf0ff;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: inline-flex;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #0ff;
+  border: 2px solid #00d8ff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#searchInput {
+  border: none; background: transparent;
+  padding: 15px 40px 15px 20px;
+  width: 280px;
+  font-size: 1.1rem;
+  color: #fff;
+  outline: none;
+}
+
+.search-btn {
+  background: #00d8ff;
+  border: none;
+  color: #00222f;
+  padding: 14px 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+  background: #00f3fe;
+}
+
+.file-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 40px 30px;
+}
+
+.file-card {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.file-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00d8ff;
+}
+
+.file-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  color: #00d8ff;
+  text-shadow: 0 0 8px #0ff;
+}
+
+.file-info {
+  text-align: center;
+  color: #ccf8ff;
+}
+
+.filename {
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filesize {
+  font-size: 0.9rem;
+  color: #81d4fa;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px; height: 60px;
+  background: #00d8ff;
+  border-radius: 50%;
+  border: none;
+  font-size: 2.5rem;
+  color: #00222f;
+  cursor: pointer;
+  box-shadow: 0 12px 15px rgba(0, 216, 255, 0.6);
+  transition: box-shadow 0.2s ease;
+}
+
+.fab:hover {
+  box-shadow: 0 15px 20px rgba(0, 255, 255, 0.8);
+}
+
+/* Modal styling */
+.modal-bg {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width: 100vw; height: 100vh;
+  background: rgba(10, 10, 10, 0.8);
+  justify-content: center; align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  width: 320px;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: #00d8ff;
+}
+
+input[type="file"] {
+  margin: 20px 0;
+  width: 100%;
+}
+
+button {
+  background: #00d8ff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 40px;
+  font-weight: 700;
+  color: #00222f;
+  cursor: pointer;
+  margin: 10px 5px 0;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #00f3fe;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  opacity: 0;
+  color: #00f3fe;
+  background: rgba(0, 216, 255, 0.2);
+  font-weight: 700;
+  box-shadow: 0 0 12px #00f3fe;
+  transition: opacity 0.3s ease;
+}
+.toast.show {
+  opacity: 1;
+  }
